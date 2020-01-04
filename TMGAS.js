@@ -7,13 +7,14 @@ function getTime(){
 function doPost(e){
   //Slackのtokenは必ず変数名をtokenにすること!
   var token = PropertiesService.getScriptProperties().getProperty('SLACK_ACCESS_TOKEN');
-  var verify_token = "hookのトークン";
+  var verify_token = "token of hook";
   var name = "bi_jo";
-  var icon = ':woman:';
+  //デフォルト:woman: :man:にしておく
+  var icon = ":woman:";
   //チャンネル指定したい場合はここで変数定義してpostする際にその変数を使ってあげればよい
   //var channel = "#gas";
   if(verify_token != e.parameter.token){
-    throw new Error("管理者に問い合わせてくださいな");
+    throw new Error("管理者に問い合わせてください");
   }  
   
   //ライブラリのやつにトークンを定義してあげる
@@ -40,6 +41,7 @@ function doPost(e){
         text = "張り切っていこう♪";
         break;
       case 3:
+        icon = ":man:";
         text = "負け犬から馬の骨に昇格させてやる";
         break;
     }
@@ -54,6 +56,7 @@ function doPost(e){
         text = "頑張りすぎには注意だぞ♪";
         break;
       case 3:
+        icon = ":man:";
         text = "最低でも10時間勉強してから声をかけてくれ";
         break;
     }
@@ -68,6 +71,7 @@ function doPost(e){
         text = "さあ、頑張ってこ～♪";
         break;
       case 3:
+        icon = ":man:";
         text = "たとえ100万時間あろうとも、貴様と交わす言葉はただ一言・・・。はよ帰ってこんかいこのバカタレ";
         break;
     }
@@ -82,6 +86,7 @@ function doPost(e){
         text = "今日はたくさん頑張りましたねっ♪";
         break;
       case 3:
+        icon = ":man:";
         //user_nameを指定してあげれば投稿したユーザー名を使用することも可能
         text = e.parameter.user_name + "よ…貴様の散り様…最後に勉強家として認めてやる!";
         break;
