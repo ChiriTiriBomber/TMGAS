@@ -41,6 +41,8 @@ function doPost(e){
         text = "張り切っていこう♪";
         break;
       case 3:
+        //海馬コーポレーションとは関係は断じてない。
+        name = "海馬瀬戸";
         icon = ":man:";
         text = "負け犬から馬の骨に昇格させてやる";
         break;
@@ -56,6 +58,7 @@ function doPost(e){
         text = "頑張りすぎには注意だぞ♪";
         break;
       case 3:
+        name = "海馬瀬戸";
         icon = ":man:";
         text = "最低でも10時間勉強してから声をかけてくれ";
         break;
@@ -71,6 +74,7 @@ function doPost(e){
         text = "さあ、頑張ってこ～♪";
         break;
       case 3:
+        name = "海馬瀬戸";
         icon = ":man:";
         text = "たとえ100万時間あろうとも、貴様と交わす言葉はただ一言・・・。はよ帰ってこんかいこのバカタレ";
         break;
@@ -86,6 +90,7 @@ function doPost(e){
         text = "今日はたくさん頑張りましたねっ♪";
         break;
       case 3:
+        name = "海馬瀬戸";
         icon = ":man:";
         //user_nameを指定してあげれば投稿したユーザー名を使用することも可能
         text = e.parameter.user_name + "よ…貴様の散り様…最後に勉強家として認めてやる!";
